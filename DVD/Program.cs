@@ -2,18 +2,13 @@
 
 public class DVD{
 
-    public static DVD Master;
-
     public Vector2I WindowSize = new Vector2I(1920/2, 540);
 
-    public Vector2 ImagePosition;
+    public Vector2 ImagePosition = new Vector2(0, 0);
     public Vector2 ImageSpeed = new Vector2(0.125f, 0.125f);
     public Vector2 ImageSize => new Vector2(LogoTexture.Width, LogoTexture.Height) * ImageScale;
 
     public Vector2 ImageBottomRight => ImagePosition + ImageSize;
-    public Vector2 ImageBottomLeft => ImagePosition + ImageSize * new Vector2(1, 0);
-    public Vector2 ImageTopRight => ImagePosition + ImageSize * new Vector2(0, 1);
-    public Vector2 ImageTopLeft => ImagePosition;
 
     public Texture2D LogoTexture;
 
@@ -27,15 +22,11 @@ public class DVD{
 
     public void Init(){
         Raylib.SetConfigFlags(ConfigFlags.FLAG_WINDOW_HIGHDPI | ConfigFlags.FLAG_WINDOW_UNDECORATED | ConfigFlags.FLAG_WINDOW_TRANSPARENT | ConfigFlags.FLAG_WINDOW_ALWAYS_RUN | ConfigFlags.FLAG_WINDOW_UNFOCUSED | ConfigFlags.FLAG_WINDOW_TOPMOST | ConfigFlags.FLAG_WINDOW_MOUSE_PASSTHROUGH);
-        Raylib.InitWindow(WindowSize.x, WindowSize.y, $"DVD - {WindowSize.x}, {WindowSize.y} - 0");
+        Raylib.InitWindow(WindowSize.x, WindowSize.y, $"DVD");
 
         Start();
 
         while(!Raylib.WindowShouldClose()){
-
-            WindowSize.x = Raylib.GetScreenWidth();
-            WindowSize.y = Raylib.GetScreenHeight();
-            Raylib.SetWindowTitle($"DVD - {WindowSize.x}, {WindowSize.y} - {Raylib.GetFPS()}");
 
             Raylib.BeginDrawing();
             
@@ -70,8 +61,8 @@ public class DVD{
         Raylib.DrawTextureEx(LogoTexture, new Vector2(0, 0), 0, ImageScale, new Color((byte)r, (byte)g, (byte)b, (byte)255));
 
 
-        if (ImageTopLeft.x <= 0) ImageSpeed.x *= -1;
-        if (ImageTopLeft.y <= 0) ImageSpeed.y *= -1;
+        if (ImagePosition.x <= 0) ImageSpeed.x *= -1;
+        if (ImagePosition.y <= 0) ImageSpeed.y *= -1;
         if (ImageBottomRight.y >= Raylib.GetMonitorHeight(Raylib.GetCurrentMonitor())) ImageSpeed.y *= -1;
         if (ImageBottomRight.x >= Raylib.GetMonitorWidth(Raylib.GetCurrentMonitor())) ImageSpeed.x *= -1;
 

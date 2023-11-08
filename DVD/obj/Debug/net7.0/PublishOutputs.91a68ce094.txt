@@ -1,0 +1,11 @@
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/DVD
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/DVD.dll
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/DVD.deps.json
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/DVD.runtimeconfig.json
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/DVD.pdb
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/Raylib-cs.dll
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/runtimes/linux-x64/native/libraylib.so
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/runtimes/osx-arm64/native/libraylib.dylib
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/runtimes/osx-x64/native/libraylib.dylib
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/runtimes/win-x64/native/raylib.dll
+/Users/timothymarriott/Documents/Development/DVD/DVD/bin/Debug/net7.0/publish/runtimes/win-x86/native/raylib.dll
